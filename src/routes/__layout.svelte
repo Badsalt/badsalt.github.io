@@ -31,8 +31,6 @@
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
             <!-- Navbar menu content here -->
-
-            <div class="dropdown dropdown-hover">
               <li>
                 <a
                   href="/"
@@ -40,14 +38,6 @@
                   class="btn btn-ghost normal-case text-xl">Research Overview</a
                 >
               </li>
-              <ul
-                tabindex="0"
-                class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-48"
-              >
-                <li><a href="#">Current projects</a></li>
-                <li><a href="#">Projects</a></li>
-              </ul>
-            </div>
             <!-- <li><a class="btn btn-ghost normal-case text-xl" href="./">Research Overview</a></li> -->
 
             <div class="dropdown dropdown-hover">
@@ -95,20 +85,11 @@
       <label for="my-drawer-3" class="drawer-overlay" />
       <ul class="p-4 overflow-y-auto menu w-80 bg-base-100">
         <!-- Sidebar content here -->
-        <div class="dropdown dropdown-hover">
           <li>
             <a href="/" tabindex="0" class="btn btn-ghost normal-case text-xl"
-              >Research Overview</a
-            >
+              >Research Overview</a>
           </li>
-          <ul
-            tabindex="0"
-            class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-48"
-          >
-            <li><a href="#">Current projects</a></li>
-            <li><a href="#">Finnised Projects</a></li>
-          </ul>
-        </div>
+
         <!-- <li><a class="btn btn-ghost normal-case text-xl" href="./">Research Overview</a></li> -->
 
         <div class="dropdown dropdown-hover">
