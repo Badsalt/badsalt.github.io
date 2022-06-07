@@ -1,10 +1,12 @@
 <script>
     import Card from "$lib/components/card.svelte";
     import members from "$lib/data/members.json";
+    import {currentPage} from "$lib/components/stores.js"
     function scrollToTop() {
         let element = document.getElementById("scroll");
         element.scroll({ top: 0, behavior: "smooth" });
     }
+    $currentPage = "lab_members"
 </script>
 
 <svelte:head>
@@ -25,7 +27,7 @@
             >Scroll To Top</button
         >
 
-        <h1 id="2">Former Members</h1>
+        <h1 id="former">Former Members</h1>
         
         <Card args={members["emma_andersson_evelönn"]} />
         <Card args={members["zahra_haider"]} />
@@ -50,9 +52,10 @@
 
     }
 
-    /* .container {
-        width: 75%;
-    } */
+     .container {
+        margin-bottom: 50px;
+        margin-top: 100px;
+    } 
 
     h1 {
         font-size: 1.5em;

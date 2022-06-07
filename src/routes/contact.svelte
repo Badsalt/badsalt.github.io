@@ -5,9 +5,10 @@
 
 <script>
     import { fly, fade, slide, draw } from "svelte/transition";
+    import {currentPage} from "$lib/components/stores.js"
+    $currentPage = "contact"
 </script>
 
-<main>
 
     <div class="container">
         
@@ -44,22 +45,13 @@
        
     </div>
 
-</main>
-
 
 <style>
- main {
-        width: 100%;
-        border: 0;
-        margin: 0;
-        padding-bottom: 75px;
-        overflow-y: scroll;
-    }
 
     .container {
         width: 75%;
-        margin-top: 20px;
-        /* margin: 20px auto; */
+        margin-bottom: 75px;
+        margin-top: 100px;
     }
 
     .test { 

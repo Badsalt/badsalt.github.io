@@ -4,6 +4,8 @@
 
 <script>
     import { fly, fade, slide, draw } from "svelte/transition";
+    import { currentPage } from "$lib/components/stores"
+    $currentPage = "index"
 </script>
 
 <div class="container">
@@ -49,8 +51,8 @@
 
 <style>
     .container {
-        margin-top: 20px;
-        margin-bottom: 100px;
+        margin-bottom: 75px;
+        margin-top: 100px;
         text-align: center;
     }
     .avatar {

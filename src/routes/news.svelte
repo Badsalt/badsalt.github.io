@@ -4,23 +4,16 @@
 <script>
 import { fly, fade, slide, draw } from "svelte/transition";
 import { quintOut } from 'svelte/easing';
-import { is_shared } from "$lib/components/stores.js"
- $is_shared = false;
+import { is_shared, currentPage } from "$lib/components/stores.js"
+	$currentPage = "news";
+	$is_shared = false;
 
 	function copyClipboard(id) {
 		wait()
-  /* Get the text field */
-  var copyText = window.location.host + window.location.pathname + "#" +id;
 
-  /* Select the text field */
-//   copyText.select();
-//   copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  var copyText = window.location.host + window.location.pathname + "#" + id;
 
-   /* Copy the text inside the text field */
   navigator.clipboard.writeText(copyText);
-
-  /* Alert the copied text */
-//   alert("Copied the text: " + copyText);
 }
 
 async function wait(){
@@ -30,7 +23,6 @@ async function wait(){
 	$is_shared = false;
 }
 
-
 </script>
 
 
@@ -39,7 +31,7 @@ async function wait(){
 
 
 	{#if $is_shared}
-	<div in:slide="{{delay: 250, duration: 1500, easing: quintOut }}" out:slide="{{delay: 250, duration: 1000, easing: quintOut }}"  class="alert alert-sucess test shadow-lg fixed w-11/12 lg:w-3/4">
+	<div in:slide="{{delay: 250, duration: 1500, easing: quintOut }}" out:slide="{{delay: 250, duration: 1000, easing: quintOut }}"  class="alert alert-sucess test shadow-lg absolute top-16  w-11/12 lg:w-3/4">
 		<div>
 		  <span>The link is copied to the clipboard</span>
 		</div>
@@ -47,13 +39,6 @@ async function wait(){
 	{/if}
 
 	<ul class="my-12">
-		<li><article>
-
-		</article></li>
-
-		<li><article>
-
-		</article></li>
 
 		<li><article id="1" class="border-2 rounded-xl border-black">
 			<h1 class="font-bold">Suspendisse elit libero</h1>
@@ -81,8 +66,8 @@ async function wait(){
 			<li class="mt-5"><article id="3" class="border-2 rounded-xl border-black">
 				<h1 class="font-bold">News from other Sources</h1>
 				<ul>
-					<li><a class="underline decoration-blue" href="https://www.barncancerfonden.se/barncancerforskning/sa-ska-forskarna-utrota-barncancer/forskningsreportage/hostutlysningen---sophie-degerman/">https://www.barncancerfonden.se/barncancerforskning/sa-ska-forskarna-utrota-barncancer/forskningsreportage/hostutlysningen---sophie-degerman/</a></li>
-					<li><a class="underline decoration-blue" href="https://www.vk.se/2018-12-21/spannande-att-kunna-paverka-framtidens-vard">https://www.vk.se/2018-12-21/spannande-att-kunna-paverka-framtidens-vard</a></li>
+					<li><a class="underline decoration-blue-600" href="https://www.barncancerfonden.se/barncancerforskning/sa-ska-forskarna-utrota-barncancer/forskningsreportage/hostutlysningen---sophie-degerman/">https://www.barncancerfonden.se/barncancerforskning/sa-ska-forskarna-utrota-barncancer/forskningsreportage/hostutlysningen---sophie-degerman/</a></li>
+					<li><a class="underline decoration-blue-600" href="https://www.vk.se/2018-12-21/spannande-att-kunna-paverka-framtidens-vard">https://www.vk.se/2018-12-21/spannande-att-kunna-paverka-framtidens-vard</a></li>
 				</ul>
 				<div class="flex px-5 flex-row justify-end bg-base-300">
 
@@ -105,9 +90,8 @@ async function wait(){
 </div>
 
 <style>
-
-	.test {
-
+	.container {
+		margin-bottom: 75px;
+        margin-top: 100px;
 	}
-
 </style>
