@@ -25,11 +25,12 @@
         <div in:fade="{{ duration: 1000, delay: 200 }}" class="basis-1/3">
             <!-- [4/3] -->
             <div class="avatar w-full aspect-[4/3] rounded-lg border-4 border-black">
-                <img src="/pic/gruppbild-min.JPG" alt="Group Picture Lab Members">
+                <!-- svelte-ignore a11y-img-redundant-alt -->
+                <img src="/pic/gruppbild.JPG" alt="Group Picture Lab Members">
               </div>
         </div>
         <div in:fade="{{ duration: 1000, delay: 200 }}" class="basis-2/3">
-            <div class="text-left w-11/12  mx-auto my-auto lg:ml-6 lg:w-9/12 text-lg lg:text-md">
+            <div class="text-left w-11/12  mx-auto my-auto lg:ml-6 lg:w-10/12 text-md lg:text-lg">
                 <p class="mb-6">Sofie Degerman’s research team holds expertsise in the fields of epigenetics, telomere biology, and hematopathology, and aims to improve diagnostics, risk stratification, and treatment of hematological malignancies with a special focus on T-cell acute lymphoblastic leukemia (T-ALL). The research is carried out in the Translational Research Centre at Umeå University, which is an excellent translational research environment equipped with modern molecular biology technologies.
                 </p>
                 <h1 class="font-bold text-lg my-4">Sofie Degerman’s research is currently granted by:</h1>
@@ -53,7 +54,7 @@
 <style>
     .container {
         margin-bottom: 75px;
-        margin-top: 100px;
+        margin-top: 90px;
         text-align: center;
     }
     .avatar {

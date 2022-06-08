@@ -11,7 +11,12 @@
 </script>
 
 <svelte:head>
-    <title>{status}</title>
+    {#if status == 404}
+        <title>Page not found</title>
+    {:else}
+    <title>{title}</title>
+    {/if}
+    
 </svelte:head>
 
 <script>
@@ -21,10 +26,12 @@
 
 {#if status == 404}
 <div class="error">
+    <div class="text-center">
+        <h1 class="text-8xl">404</h1>
+        <h1 class="text-2xl">Page not found</h1>
+        <button class="btn btn-primary"><a href="/">Return to homepage</a></button>
+    </div>
 
-    <h1>{title}</h1>
-    <h1>The requested resorce is not found</h1>
-    <button class="btn btn-primary"><a href="/">Return to homepage</a></button>
 </div>
 {:else}
 <div class="error">
@@ -34,8 +41,6 @@
     <button class="btn btn-primary"><a href="/">Return to homepage</a></button>
 </div>
 {/if}
-
-
 
 
 <style>

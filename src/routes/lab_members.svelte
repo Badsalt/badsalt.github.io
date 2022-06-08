@@ -15,7 +15,7 @@
 
 <main id="scroll">
     <div class="container w-11/12 lg:w-3/4">
-        <h1>Current Members</h1>
+        <h1 id="current">Current Members</h1>
         <Card args={members["sofie_degerman"]} />
         <Card args={members["magnus_hultdin"]} />
         <Card args={members["pia_osterman"]} />
