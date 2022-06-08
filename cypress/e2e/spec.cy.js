@@ -1,0 +1,15 @@
+describe('empty spec', () => {
+  it('passes', () => {
+    cy.visit('localhost:3000')
+    cy.wait(1000)
+    cy.visit('localhost:3000/contact')
+    cy.wait(1000)
+    cy.visit('localhost:3000/lab_members')
+    cy.wait(1000)
+    cy.visit('localhost:3000/news')
+    cy.wait(1000)
+    cy.visit('localhost:3000/publications')
+    cy.wait(1000)
+    cy.visit('localhost:3000/7afdssdf', {failOnStatusCode:false})
+  })
+})
