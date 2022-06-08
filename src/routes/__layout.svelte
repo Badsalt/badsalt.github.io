@@ -83,7 +83,7 @@
     </div>
     <div class="drawer-side">
       <label for="my-drawer-3" class="drawer-overlay" />
-      <ul class="p-4 overflow-y-auto menu w-80 bg-base-100">
+      <ul class="p-4 overflow-y-auto menu w-10/12 md:w-80 bg-base-100">
         <!-- Sidebar content here -->
         <li>
           <a href="/" tabindex="0" class="btn btn-ghost normal-case text-xl"
@@ -149,6 +149,9 @@
     padding: 0;
   }
 
+  .menu-horizontal li {
+    margin: auto 5px;
+  }
   li a {
     position: relative;
   }
