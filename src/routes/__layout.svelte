@@ -134,7 +134,7 @@
             >Contact</a
           >
         </li>
-        <li><a class="btn btn-ghost normal-case text-xl" href="#">Media</a></li>
+        <!-- <li><a class="btn btn-ghost normal-case text-xl" href="#">Media</a></li> -->
       </ul>
     </div>
   </div>

@@ -7,7 +7,7 @@ import { quintOut } from 'svelte/easing';
 
 <div in:blur="{{delay: 250, duration: 600, easing: quintOut }}" class="card lg:card-side bg-base-100 shadow-x1 w-full">
     {#if args.pic_src} 
-    <figure><img src={args.pic_src} style="width: (292/2)px; height:(341/2)px" alt={args.name}></figure>
+    <figure class="p-2 ml-2"><img src={args.pic_src} style="width: (292/2)px; height:(341/2)px;" alt={args.name} loading='lazy'></figure>
     {/if}
     
     <div class="card-body">

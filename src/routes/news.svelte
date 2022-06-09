@@ -40,24 +40,16 @@
 
 	<ul class="my-12">
 		<li>
-			<article id="1" class="border-2 rounded-xl border-black">
-				<h1 class="font-bold">Suspendisse elit libero</h1>
-				<iframe
-					class="mx-auto mt-10 w-1/2 aspect-video"
-					src="https://player.vimeo.com/video/370874522?h=bd3326f2b6&color=ffffff&title=0&byline=0&portrait=0"
-					frameborder="0"
-					allow="autoplay; fullscreen; picture-in-picture"
-					allowfullscreen
-				/>
-				<div class="flex px-5 flex-row justify-between bg-base-300">
-					<div class="">Published: 2 years ago</div>
+		<li><article id="1" class="border-2 rounded-xl border-black">
+			<h1 class="font-bold">Suspendisse elit libero</h1>
+			<iframe title="video" class="mx-auto mt-10 w-1/2 aspect-video" src="https://player.vimeo.com/video/370874522?h=bd3326f2b6&color=ffffff&title=0&byline=0&portrait=0"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+			<div class="flex px-5 flex-row justify-between bg-base-300">
+				<div class="">
+					Published: 2 years ago
+				</div>
 
-					<div>
-						<button
-							class="btn btn-primary"
-							on:click={() => copyClipboard(1)}>Share</button
-						>
-					</div>
+				<div>
+					<button class="btn btn-primary" on:click={()=>copyClipboard(1)}>Share</button>
 				</div>
 			</article>
 		</li>
@@ -130,17 +122,12 @@
 					<div>
 						<button
 							class="btn btn-primary"
-							on:click={() => copyClipboard(3)}>Share</button
-						>
+							on:click={() => copyClipboard(3)}>Share</button>
 					</div>
 				</div>
 			</article>
 		</li>
 	</ul>
-
-	<div />
-
-	<div />
 </div>
 
 <style>
