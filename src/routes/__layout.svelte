@@ -1,7 +1,6 @@
 <script>
   import "../app.css";
-  import { currentPage } from "$lib/components/stores"
-  
+  import { currentPage } from "$lib/components/stores";
 </script>
 
 <main>
@@ -33,7 +32,11 @@
           <ul class="menu menu-horizontal p-0">
             <!-- Navbar menu content here -->
             <li>
-              <a href="/" tabindex="0" class=" btn btn-ghost normal-case text-xl"  class:currentPage={ $currentPage === 'index'}
+              <a
+                href="/"
+                tabindex="0"
+                class=" btn btn-ghost normal-case text-xl"
+                class:currentPage={$currentPage === "index"}
                 >Research Overview</a
               >
             </li>
@@ -44,7 +47,9 @@
                 <a
                   href="/lab_members"
                   tabindex="0"
-                  class="btn btn-ghost normal-case text-xl" class:currentPage={ $currentPage === 'lab_members'}>Lab Members</a
+                  class="btn btn-ghost normal-case text-xl"
+                  class:currentPage={$currentPage === "lab_members"}
+                  >Lab Members</a
                 >
               </li>
               <ul
@@ -59,22 +64,29 @@
               </ul>
             </div>
             <li>
-              <a class="btn btn-ghost normal-case text-xl" class:currentPage={ $currentPage === 'publications'} href="/publications"
-                >Publications</a
+              <a
+                class="btn btn-ghost normal-case text-xl"
+                class:currentPage={$currentPage === "publications"}
+                href="/publications">Publications</a
               >
             </li>
             <li>
-              <a class="btn btn-ghost normal-case text-xl" class:currentPage={ $currentPage === 'news'} href="/news">News</a>
+              <a
+                class="btn btn-ghost normal-case text-xl"
+                class:currentPage={$currentPage === "news"}
+                href="/news">News</a
+              >
             </li>
             <li>
-              <a class="btn btn-ghost normal-case text-xl" class:currentPage={ $currentPage === 'contact'} href="/contact"
-                >Contact</a
+              <a
+                class="btn btn-ghost normal-case text-xl"
+                class:currentPage={$currentPage === "contact"}
+                href="/contact">Contact</a
               >
             </li>
             <!-- <li>
               <a class="btn btn-ghost normal-case text-xl" href="#">Media</a>
             </li> -->
-    
           </ul>
         </div>
         <div class="navbar-end" />
@@ -165,21 +177,20 @@
     background-color: transparent;
   }
 
-  li a::before{
+  li a::before {
     background-color: grey;
     height: 2.5px;
     width: 100%;
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     transform: scaleX(0);
-    transition: all .20s ease-out;
+    transition: all 0.2s ease-out;
     border-radius: 10px;
   }
 
-  li a:hover::before{
+  li a:hover::before {
     transform: scaleX(1);
   }
-
 </style>

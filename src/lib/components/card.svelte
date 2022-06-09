@@ -1,11 +1,10 @@
-
 <script>
 
 export let args;
-import { fly, fade, slide, draw ,blur } from "svelte/transition";
+import { blur } from "svelte/transition";
 import { quintOut } from 'svelte/easing';
 </script>
-<!-- in:fly="{{ y: 75, duration: 1000 }}" -->
+
 <div in:blur="{{delay: 250, duration: 600, easing: quintOut }}" class="card lg:card-side bg-base-100 shadow-x1 w-full">
     {#if args.pic_src} 
     <figure><img src={args.pic_src} style="width: (292/2)px; height:(341/2)px" alt={args.name}></figure>

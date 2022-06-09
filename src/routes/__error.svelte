@@ -23,7 +23,7 @@
 <div class="error">
 
     <h1>{title}</h1>
-    <h1>The requested resorce is not found</h1>
+    <h1>The requested resource is not found</h1>
     <button class="btn btn-primary"><a href="/">Return to homepage</a></button>
 </div>
 {:else}

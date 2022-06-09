@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script>
-    import { fly, fade, slide, draw } from "svelte/transition";
+    import { fade } from "svelte/transition";
     import { currentPage } from "$lib/components/stores"
     $currentPage = "index"
 </script>
@@ -41,7 +41,7 @@
                     <a href="https://stodforskning.umu.se/" target="_blank"><img src="/pic/founders/Medicinsk_forskning.jpg" alt=""></a>
                     <a href="https://www.regionvasterbotten.se/" target="_blank"><img src="/pic/founders/Region_Västerbotten.jpg" alt=""></a>
                     <!-- Center last element -->
-                    <span></span>
+                    <span />
                     <a href="https://www.umu.se/en/" target="_blank"><img src="/pic/founders/Umeå_University.jpg" alt=""></a>
                 </div>      
             </div>

@@ -4,8 +4,8 @@
 
 
 <script>
-    import { fly, fade, slide, draw } from "svelte/transition";
-    import {currentPage} from "$lib/components/stores.js"
+    import { fade } from "svelte/transition";
+    import { currentPage } from "$lib/components/stores.js"
     $currentPage = "contact"
 </script>
 
